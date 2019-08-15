@@ -8,17 +8,29 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Pocotó Pocotó
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <div className="Menu">
+        <a href="https://www.java.com/pt_BR/download/" target="_blank">
+        <div className="menuItem">
+          <h2>Java</h2>
+          <p>bla bla blaaaa dasodjaso jsaidjasi odasdiuhas uihsa dhaiusdksfjsdljf</p>
+        </div>
+        </a>
+        <a href="https://www.python.org/" target="_blank">
+        <div className="menuItem" style={{backgroundColor: '#ff88ff'}}>
+          <h2>Paiton</h2>
+          <p>bla bla blaaaa dasodjaso jsaidjasi odasdiuhas uihsa dhaiusdksfjsdljf</p>
+        </div>
+        </a>
+        <a href="https://pt.wikipedia.org/wiki/C%2B%2B" target="_blank">
+        <div className="menuItem">
+          <h2>C mais mais</h2>
+          <p>bla bla blaaaa dasodjaso jsaidjasi odasdiuhas uihsa dhaiusdksfjsdljf</p>
+        </div>
+        </a>
+      </div>
     </div>
   );
 }
