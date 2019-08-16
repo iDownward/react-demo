@@ -23,7 +23,7 @@ class App extends React.Component{
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Pocotó Pocotó {this.state.user.email}
+            Pocotó {this.state.user.email}
           </p>
           
         </header>
