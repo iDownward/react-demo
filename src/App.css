@@ -29,6 +29,7 @@
 
 .Menu {
   display: flex;
+  background-color: red;
 }
 
 .menuItem{
