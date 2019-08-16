@@ -2,22 +2,39 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Pocotó Pocotó
-        </p>
-      </header>
-      <div className="Menu">
-        <Language title="Java" url="https://www.java.com/pt_BR/download/"/>
-        <Language title="Paiton" url="https://www.udemy.com/course/aprenda-a-programar-em-python-com-facilidade-do-zero/?gclid=CjwKCAjwqNnqBRATEiwAkHm2BPuxef3XOEz1-ZX9jQHAgYZQVfhFtUi2v1fKnEEsqVoC8L9rQeKDjhoCgLkQAvD_BwE&moon=iapetus&utm_campaign=20180605-Portuguese&utm_medium=udemyads&utm_source=adwords-intl&utm_term=_._ag_55715746026_._kw_python_._ad_377036658218_._de_c_._dm__._pl__._ti_kwd-39231183_._li_1001773_._pd__._"/>
-        <Language title="C mais mais" url="https://pt.wikipedia.org/wiki/C%2B%2B"/>
+class App extends React.Component{
+
+  constructor(){
+    super();
+    this.state = {
+      user: {}
+    }
+  }
+
+  componentWillMount(){
+    fetch('https://randomuser.me/api/0.8')
+      .then(response => response.json())
+      .then(json => this.setState({user: json.results[0].user}))
+  }
+
+  render(){
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            Pocotó Pocotó {this.state.user.email}
+          </p>
+          
+        </header>
+        <div className="Menu">
+          <Language title="Java" url="https://www.java.com/pt_BR/download/"/>
+          <Language title="Paiton" url="https://www.udemy.com/course/aprenda-a-programar-em-python-com-facilidade-do-zero/?gclid=CjwKCAjwqNnqBRATEiwAkHm2BPuxef3XOEz1-ZX9jQHAgYZQVfhFtUi2v1fKnEEsqVoC8L9rQeKDjhoCgLkQAvD_BwE&moon=iapetus&utm_campaign=20180605-Portuguese&utm_medium=udemyads&utm_source=adwords-intl&utm_term=_._ag_55715746026_._kw_python_._ad_377036658218_._de_c_._dm__._pl__._ti_kwd-39231183_._li_1001773_._pd__._"/>
+          <Language title="C mais mais" url="https://pt.wikipedia.org/wiki/C%2B%2B"/>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 function Language(props){
