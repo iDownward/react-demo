@@ -44,6 +44,19 @@ a{
   color: black;
 }
 
+footer{
+  background-color: blueviolet;
+  flex: 0.3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p{
+  font-size: 1.2em;
+  color: white;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(360deg);

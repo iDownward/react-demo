@@ -32,6 +32,7 @@ class App extends React.Component{
           <Language title="Paiton" url="https://www.udemy.com/course/aprenda-a-programar-em-python-com-facilidade-do-zero/?gclid=CjwKCAjwqNnqBRATEiwAkHm2BPuxef3XOEz1-ZX9jQHAgYZQVfhFtUi2v1fKnEEsqVoC8L9rQeKDjhoCgLkQAvD_BwE&moon=iapetus&utm_campaign=20180605-Portuguese&utm_medium=udemyads&utm_source=adwords-intl&utm_term=_._ag_55715746026_._kw_python_._ad_377036658218_._de_c_._dm__._pl__._ti_kwd-39231183_._li_1001773_._pd__._"/>
           <Language title="C mais mais" url="https://pt.wikipedia.org/wiki/C%2B%2B"/>
         </div>
+        <Footer />
       </div>
     );
   }
@@ -45,6 +46,14 @@ function Language(props){
           <h2>{props.title}</h2>
           <p>bla bla blaaaa dasljf</p>
     </a>
+  );
+}
+
+function Footer(props){
+  return (
+    <footer>
+      <p>hello dear</p>
+    </footer>
   );
 }
 
