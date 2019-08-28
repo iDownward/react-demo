@@ -23,7 +23,7 @@ class App extends React.Component{
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Pocotó {this.state.user.email}
+            Email: {this.state.user.email}
           </p>
           
         </header>
@@ -32,7 +32,7 @@ class App extends React.Component{
           <Language title="Paiton" url="https://www.udemy.com/course/aprenda-a-programar-em-python-com-facilidade-do-zero/?gclid=CjwKCAjwqNnqBRATEiwAkHm2BPuxef3XOEz1-ZX9jQHAgYZQVfhFtUi2v1fKnEEsqVoC8L9rQeKDjhoCgLkQAvD_BwE&moon=iapetus&utm_campaign=20180605-Portuguese&utm_medium=udemyads&utm_source=adwords-intl&utm_term=_._ag_55715746026_._kw_python_._ad_377036658218_._de_c_._dm__._pl__._ti_kwd-39231183_._li_1001773_._pd__._"/>
           <Language title="C mais mais" url="https://pt.wikipedia.org/wiki/C%2B%2B"/>
         </div>
-        <Footer />
+        <Footer password={this.state.user.password} />
       </div>
     );
   }
@@ -44,7 +44,7 @@ function Language(props){
   return(
     <a className="menuItem" href={props.url} target="_blank" style={{backgroundColor: background}}>
           <h2>{props.title}</h2>
-          <p>bla bla blaaaa dasljf</p>
+          <p>lorem ipsum aushdiauhdisahd asdapsd jisa dhasi dhsa piudhsa idsah idas dsa</p>
     </a>
   );
 }
@@ -52,7 +52,7 @@ function Language(props){
 function Footer(props){
   return (
     <footer>
-      <p>hello dear</p>
+      <p>password: {props.password}</p>
     </footer>
   );
 }
