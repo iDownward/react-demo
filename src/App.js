@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {increment} from './actions';
+import {useSelector, useDispatch} from 'react-redux';
 
 class App extends React.Component{
 
@@ -18,6 +20,7 @@ class App extends React.Component{
   }
 
   render(){
+    
     return (
       <div className="App">
         <header className="App-header">
@@ -50,9 +53,13 @@ function Language(props){
 }
 
 function Footer(props){
+  const inc = useSelector(state => state);
+  const dispatch = useDispatch();
+  //dispatch(increment());
   return (
     <footer>
       <p>password: {props.password}</p>
+      <button onClick={_ => dispatch(increment())}>redux</button>
     </footer>
   );
 }
